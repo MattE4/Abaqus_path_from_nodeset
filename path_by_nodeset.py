@@ -1,3 +1,4 @@
+from __future__ import print_function
 """
 - script to create a path based on a node set and a set with the start node
 - sets need to be defined on assembly level
@@ -48,7 +49,7 @@ for i in range(num_nodes-1):
 	start_node = min_node
 	
 
-print '\nClosed loop = first node of path is also last node'
+print('\nClosed loop = first node of path is also last node')
 answer = getInput('Form closed loop? (y/n):')
 if answer in ['y', 'Y', 'yes', 'j', 'ja']:
 	path_nodes.append(path_nodes[0])
@@ -57,4 +58,4 @@ if answer in ['y', 'Y', 'yes', 'j', 'ja']:
 session.Path(name=pathname, type=NODE_LIST, expression=((instancename, (
 	tuple(path_nodes))), ))
 
-print '\nPath "'+pathname+'" was created. Check path!'
+print('\nPath "'+pathname+'" was created. Check path!')
